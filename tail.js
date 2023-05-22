@@ -16,5 +16,5 @@ const tail = function(array) {
 };
 
 // TEST CODE
-assertEqual(tail([5,6,7]), 6, 7);
+assertEqual(tail([5,6,7]), 6);
 assertEqual(tail(["Hello", "Lighthouse", "Labs"]), "Labs");
