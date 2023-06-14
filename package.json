@@ -3,7 +3,7 @@
     "chai": "^4.3.7",
     "mocha": "^9.2.2"
   },
-  "name": "lotide",
+  "name": "@haijoon2/lotide",
   "version": "1.0.0",
   "main": "assertArraysEqual.js",
   "directories": {
@@ -101,11 +101,11 @@
     "type": "git",
     "url": "git+https://github.com/haijoon2/lotide.git"
   },
-  "author": "",
+  "author": "Haijoon Kim",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/haijoon2/lotide/issues"
   },
   "homepage": "https://github.com/haijoon2/lotide#readme",
-  "description": ""
+  "description": "a mini clone of the [Lodash](https://lodash.com) library"
 }
