@@ -32,7 +32,7 @@ The following functions are currently implemented:
 
 * `findKey()`: function that takes in an object and callback and returns the first key that meets the criteria specified in callback.
 
-* `findKeyByValue()`: function that takes in an object and a value and returns the first key that corresponds to that value.
+* `findKeyByValue(object, string)`: function that takes in an object and a value and returns the first key that corresponds to that value.
 
 * `flatten()`: function that takes in an array that contains elements including nested array of elements and returns a flattened version of the array.
 
