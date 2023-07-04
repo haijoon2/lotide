@@ -20,6 +20,12 @@ const findKeyByValue = function(obj, value) {
   return undefined;
 };
 
+/* NOTE
+1. I am trying to find key (ex. sci_fi) when putting value (ex. "The Expanse")
+2. The function returns one of the keys if it has matching values
+3. if not, function returns undefined
+*/
+
 const bestTVShowsByGenre = { 
   sci_fi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",

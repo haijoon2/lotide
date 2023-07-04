@@ -7,19 +7,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const eqArrays = (array1, array2) => {
-  if (array1.length !== array2.length) {
-    return false;
-  }
-
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
-
-  return true;
-};
+const eqArrays = require('./eqArrays');
 
 const eqObjects = function(obj1, obj2) {
   const keys1 = Object.keys(obj1); // [ ...all the keys from obj1]
@@ -61,3 +49,12 @@ eqObjects(shirtObject , anotherShirtObject); // => true
 
 const longSleeveShirtObject= { size: "medium", color: "red", sleeveLength: "long" };
 eqObjects(shirtObject , longSleeveShirtObject); // => false
+
+const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
+const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
+eqObjects(multiColorShirtObject  , anotherMultiColorShirtObject); // => true
+assertEqual(eqObjects(multiColorShirtObject  , anotherMultiColorShirtObject), true);
+
+const longSleeveMultiColorShirtObject = { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
+eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject); // => false
+assertEqual(eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject), false);

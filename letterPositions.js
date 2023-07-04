@@ -1,16 +1,4 @@
-const eqArrays = (array1, array2) => {
-  if (array1.length !== array2.length) {
-    return false;
-  }
-
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
-
-  return true;
-};
+const eqArrays = require('./eqArrays');
 
 const assertArraysEqual = (actual, expected) => {
   const result = eqArrays(actual, expected);
@@ -40,3 +28,8 @@ const letterPositions = function(sentence) {
 
 const result1 = letterPositions("hello");
 const result2 = letterPositions("light house is cool");
+
+assertArraysEqual(result1["l"], [2, 3]);
+assertArraysEqual(result1["o"], [4]);
+
+assertArraysEqual(result2["t"], [4]);
